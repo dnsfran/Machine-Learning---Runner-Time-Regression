@@ -5,38 +5,38 @@ The objective is to **predict the time it takes for a runner to finish a race**,
 
 ---
 
-## 📂 Project Overview
+##  Project Overview
 
 The dataset contains records of ultra-marathon races, over 7M race records, it has been provided by Kaggle "The big dataset of ultra-marathon running".
 
-### 🧹 Preprocessing Steps
+### Preprocessing Steps
 
-1. **Dataset loading**  
+- **Dataset loading**  
    Load the original CSV file containing race and athlete information.
 
-2. **Filtering races**  
+- **Filtering races**  
    Keep only races that took place in **2020**.
 
-3. **Selecting fixed-distance races**  
+- **Selecting fixed-distance races**  
    Remove races defined by time limits (e.g. “6-hour race”) and keep only those with a measurable distance (in km or miles).
 
-4. **Distance normalization**  
+- **Distance normalization**  
    Convert all event distances to **kilometers**, ensuring consistent measurement across events.
 
-5. **Outlier removal**  
+- **Outlier removal**  
    Within each event, remove the **top 5% fastest runners** based on average speed to reduce bias from extreme performances.
 
 ---
 
 
-## 🎯 Goal
+##  Goal
 The cleaned data will be used to train **machine learning models** (e.g., regression algorithms) that predict an athlete’s **race finish time** based on: 
 - Race characteristic 
 - Athlete’s characteristics
 
 ---
 
-## ⚙️Technologies 
+## Technologies 
 For this project, a polynomial regression model will be used. It provides a simple and interpretable baseline for understanding how age, gender, and distance relate to performance. It is also more appropriate than a linear regression, as the mean time of 200 km will not be 4 times the time of 50 km.
 
 
@@ -48,7 +48,7 @@ The dataset is divided into three parts: 70\% for training, 15\% for validation,
 
 
 
-## 🏁 Output
+## Output
 
 This project explored two machine learning approaches---polynomial regression and Random Forest regression---for predicting ultramarathon athletes’ average speed from age, gender, and race distance. The results indicate that polynomial regression with degree 4 provides the best generalization performance, achieving lower validation and test errors compared to Random Forest models.
 
